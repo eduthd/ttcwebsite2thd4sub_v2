@@ -1,0 +1,212 @@
+/* --- General site layout + default styling --- */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header, main {
+    width: 100%;
+    max-width: 960px;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+header {
+    border-bottom: 1px solid grey;
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- LOGO FIX: SVG now visible --- */
+.site-header img {
+    height: 80px;   /* Adjust size here */
+    width: auto;
+    display: block;
+}
+
+/* --- Navigation --- */
+.navigation {
+    display: flex;
+}
+
+.navigation-link {
+    color: #202945;
+    padding: 0.7em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation-link:hover {
+    color: #F3C300;
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: auto;
+    background-color: rgba(66, 73, 83, 0.8);
+    align-self: stretch;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+}
+
+/* --- Heading colours --- */
+h1, h2, h3, h4, h5, h6 {
+    color: #1A3D6D;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    font-weight: normal;
+}
+
+p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* --- Table styling --- */
+table {
+    margin: 2em 0;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #eaebf5;
+}
+
+th, td {
+    border: 1px solid #d7d7d7;
+    padding: 0.5em 0.8em;
+    text-align: left;
+}
+
+/* --- Form styling --- */
+form {
+    max-width: 40em;
+    border: 1px solid #e5e5e5;
+    padding: 1.5em;
+    margin: 2em 0;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+label {
+    font-size: 0.9em;
+}
+
+input[type='text'], input[type='email'], textarea {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b3b3b3;
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.3em;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type='submit'] {
+    width: auto;
+    padding: 0.5em 2em;
+    background-color: #1A3D6D;
+    color: white;
+    border-style: none;
+    border-radius: 0.3em;
+    margin: 1.5em 0 0 0;
+}
+
+/* --- Full-page background images (Firefox-compatible) --- */
+
+html.home-page,
+html.services-page,
+html.contact-page {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Individual page backgrounds */
+html.home-page {
+    background-image: url("../images/AdobeStock_39219837.jpeg");
+}
+
+html.services-page {
+    background-image: url("../images/AdobeStock_63511291.jpg");
+}
+
+html.contact-page {
+    background-image: url("../images/AdobeStock_134362781.jpg");
+}
+
+/* --- Make content readable on top of background --- */
+header, footer, h1, h2, h3, p, ul, table, form {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+/* --- Footer additions: social icons, legal link, copyright, credits --- */
+footer a {
+    color: #1A3D6D;
+}
+
+footer p {
+    background-color: transparent;
+    padding: 0.2em;
+    margin: 0.3em 0;
+    color: #202945;
+    font-size: 0.85em;
+}
+
+footer .credits {
+    font-size: 0.75em;
+    color: #424953;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 0.6em 0;
+}
+
+.social-links img {
+    display: block;
+}
+
+/* --- Services page image gallery --- */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6em;
+    margin: 1em 0;
+    padding: 0.6em;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 0.5em;
+}
+
+.gallery img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 0.3em;
+}
